@@ -7,12 +7,12 @@ import roboticstoolbox as rtb
 from roboticstoolbox.backends.PyPlot import PyPlot
 # Configurar NumPy para suprimir la notación científica y limitar la precisión
 np.set_printoptions(suppress=True, precision=4,
-                    formatter={'float': lambda x: f"{0:8.4g}" if abs(x) < 1e-10 else f"{x:8.4g}"})
+formatter={'float': lambda x: f"{0:8.4g}" if abs(x) < 1e-10 else f"{x:8.4g}"})
 
 # Declaramos nuestro robot, incluidos limites de movimiento
 robot=rtb.DHRobot(
     [
-         rtb.RevoluteDH(d=290, a=0, alpha=np.pi/2, qlim=[-2.88, 2.88]),
+rtb.RevoluteDH(d=290, a=0, alpha=np.pi/2, qlim=[-2.88, 2.88]),
 rtb.RevoluteDH(d=0, a=270, alpha=0, offset=np.pi/2, qlim=[-1.92, 1.92]), 
 rtb.RevoluteDH(d=0, a=70, alpha=np.pi/2, qlim=[-1.92, 1.22]),
 rtb.RevoluteDH(d=302, a=0, alpha=-np.pi/2, qlim=[-2.79, 2.79]),
